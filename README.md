@@ -1,5 +1,4 @@
 # Skin-Retouch
-The project is to remove the dark marks and clear the skin.
 import numpy as np
 import cv2
 from sklearn.cluster import KMeans
@@ -40,8 +39,9 @@ def prety_print_data(color_info):
         print(pprint.pformat(x))
         print()
 
-# Get Image from URL. If you want to upload an image file and use that comment the below code and replace with  image=cv2.imread("FILE_NAME")
-image = cv2.imread("C:/Users/New User/Downloads/Apparel/New folder/917736592.B07N2Z9223.PT02.jpg")
+# Get Image with  image=cv2.imread("FILE_NAME")
+image = cv2.imread("C:/Users/New User/Desktop/Apparel/New folder/original.jpg")
+
 
 # Apply Skin Mask
 skin = extractSkin(image)
@@ -53,3 +53,4 @@ plt.imshow(cv2.cvtColor(cv2.addWeighted(img, 0.5, image, 0.5, 0), cv2.COLOR_BGR2
 
 ##plt.tight_layout()
 plt.show()
+
